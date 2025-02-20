@@ -1,0 +1,224 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+.app-header {
+  background-color: #2c3e50;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+.app {
+  display: flex;
+  width: 100%;
+  min-height: 85vh; /* 確保有最小高度 */
+  height: auto; /* 允許高度自動調整 */
+}
+
+/* aside */
+
+.sidebar {
+  background-color: #34495e;
+  width: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0; /* 防止側邊欄縮小 */
+}
+
+.sidebar button {
+  background-color: rgb(43, 181, 155);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#detectFood{
+  color: white;
+}
+
+#foodDetectionOptions button{
+  background-color: rgb(43, 160, 181);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: right;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#historyButton {
+  padding: 10px 0;
+}
+
+#foodDetectionOptions button:hover, #historyButton:hover {
+  background-color: rgb(43, 181, 107);
+  transform: scale(1.05);
+}
+
+/* main */
+
+.content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.HomeContainer {
+  width: 70%;
+  height: 50%;
+}
+
+#demoVideo {
+  width: 100%;
+  height: auto;
+}
+
+.upload-form {
+  margin: 20px 0;
+}
+
+.custom-file-upload {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #2980b9;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.detectFoodContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.detectFoodContainer button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px auto 10px auto;
+  cursor: pointer;
+  display: none;
+}
+
+#sendbutton:hover, #calendarbutton:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#loading {
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: none;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.historyContainer {
+  background-color: rgb(236, 240, 241);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 800px;
+  width: auto;
+  margin: 20px auto;
+  display: none;
+}
+
+#clearHistoryButton {
+  margin-left: 700px;
+}
+
+.historyContainer h3 {
+  font-size: 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.historyContainer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.historyContainer li {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.historyContainer img {
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.historyContainer img:hover {
+  transform: scale(1.1);
+}
+
+.historyContainer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.historyContainer div h4 {
+  margin: auto 0;
+  font-size: 16px;
+  color: #2c2b2b;
+  align-self: center;
+}
+
+.historyContainer div p {
+  margin: 0;
+  text-align: right;
+  font-size: 14px;
+  color: #888;
+  align-self: flex-end;
+}

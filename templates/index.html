@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>食物熱量 AI 辨識系統</title>
+  <link rel="stylesheet" type="text/css" href="../static/index.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+          crossorigin="anonymous"></script>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script type="text/javascript" src="../static/index.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>食物熱量 AI 辨識系統</h1>
+  </header>
+  <div class="app">
+    <aside class="sidebar">
+      <h2 id="detectFood">🍽️食物辨識</h2>
+      <div id="foodDetectionOptions">
+        <button id="chooseFromAlbum" data-action="chooseFromAlbum">選擇相簿圖片🎞️</button>
+        <button id="takePhoto" data-action="takePhoto">立即拍照📸</button>
+      </div>
+      <div>-------------------------------------</div>
+      <button id="historyButton" data-action="showHistory">📊歷史紀錄</button>
+    </aside>
+    <main class="content">
+      <div class="HomeContainer">
+        <h5 id="demoVideoInfo">Demo 影片</h5>
+        <video controls id="demoVideo" loop>
+          <source src="../static/media/demo.mkv" type="video/mp4">
+          您的瀏覽器不支援影片播放。
+        </video>
+      </div>
+      <div class="detectFoodContainer">
+        <input id="imageinput" type="file" name="image" accept="image/*" onchange="readUrl(this)">
+        <button id="captureButton" data-action="captureButton">拍照</button>
+        <button id="takePhotoAgain" data-action="takePhotoAgain">重新拍照</button>
+        <button id="processImage" data-action="processImage">辨識此照片熱量</button>
+        <button id="calendarbutton">記錄到Google日曆</button>
+        <div id="cameraContainer">
+          <video id="cameraStream" autoplay playsinline></video>
+          <canvas id="photoCanvas" style="display:none;"></canvas>
+        </div>
+        <p id="testresults"></p>
+        <div id="loading">正在辨識中...</div>
+        <img id="imagebox" src="">
+      </div>
+      <div class="historyContainer">
+        <h3>歷史紀錄</h3>
+        <ul id="historyList"></ul>
+        <div id="paginationControls">
+          <button id="firstPageButton">⏪ 第一頁</button>
+          <button id="prevPageButton">⬅️ 上一頁</button>
+          <span id="paginationInfo">📄 第 1 頁 / 共 X 頁</span>
+          <button id="nextPageButton">下一頁 ➡️</button>
+          <button id="lastPageButton">最後一頁 ⏩</button>
+        </div>
+        <button id="clearHistoryButton">🗑️ 清空所有紀錄</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+classes = 10
+train = /content/drive/MyDrive/yolofooddetect/December21/food_train20221222.txt
+valid = /content/drive/MyDrive/yolofooddetect/December21/food_valid20221222.txt
+names = /home/david/Desktop/tenfood/ten_food.names
+backup = /content/drive/MyDrive/yolofooddetect/December21/backup/
