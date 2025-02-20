@@ -2,9 +2,7 @@
 本專案利用 Flask 搭配 YOLO 物件偵測 進行食物影像辨識，並估算其熱量，最終將辨識結果存入 MySQL，提供歷史紀錄查詢功能。使用者可以透過 相機拍攝 或 上傳圖片 進行食物熱量辨識，並且可以查詢過去的紀錄。
 
 #### 🎥 更多詳情查看:
-<video width="320" height="240" controls loop>
-    <source src="static/media/demo.mp4" type="video/mp4">
-</video>
+https://github.com/user-attachments/assets/805fa3d4-8708-4d7a-9560-e4d58b87d662
 
 ## 📌 功能特色
 - 📷 即時相機拍攝 或 上傳圖片 進行食物辨識
