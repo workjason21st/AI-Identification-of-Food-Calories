@@ -1,10 +1,15 @@
 # 🍽 食物熱量智慧辨識系統
 本專案利用 Flask 搭配 YOLO 物件偵測 進行食物影像辨識，並估算其熱量，最終將辨識結果存入 MySQL，提供歷史紀錄查詢功能。使用者可以透過 相機拍攝 或 上傳圖片 進行食物熱量辨識，並且可以查詢過去的紀錄。
 
+#### 🎥 更多詳情查看:
+<video width="320" height="240" controls loop>
+<source src="static/media/demo.mkv" type="video/mp4">
+</video>
+
 ## 📌 功能特色
 - 📷 即時相機拍攝 或 上傳圖片 進行食物辨識
 - 🧠 YOLO 物件偵測 進行食物分類與熱量估算
-    ## 目前可辨識食物
+    #### 目前可辨識食物
     - ChickenSchnitzel (炸雞排)
     - Cabbage (高麗菜)
     - WaterSpinach (空心菜)
@@ -45,6 +50,13 @@
 ├── requirements.txt # 依賴套件清單
 
 ├── README.md       # 專案說明文件
+
+### ⚠️ 權重缺失：因為 LFS 超出上限
+請確保 YOLO 模型的權重檔案已正確下載並放置於 models 資料夾中。
+
+=>> [權重檔案下載](https://drive.google.com/drive/folders/1nwIArQ_Wjk9KglTm61v-jepH-jKNHD7U?usp=drive_link)
+
+##
 
 ## 📜 未來改進
 - 開發行動版 APP (React Native)
